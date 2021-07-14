@@ -1,0 +1,50 @@
+ +++++ Testing Date class +++++ 
+Testing GetDay : 
+Date Class member GetDate working correctly.
+Testing IsValidDate : 
+Date is valid!
+Date is invalid!
+d2 : (Default constructor check) 1/Jan/2021
+d2 : (Copy assignment operator working check) 15/Feb/2021
+ +++++ Date class is working properly +++++ 
+
+ +++++ Testing Station class +++++ 
+Testing GetName : 
+Station Class member GetName working properly.
+Testing GetDistance : 
+Station Class member GetDistance working properly.
+Testing Equality operator : 
+Station Class overloaded equality operator working properly.
+ +++++ Station class is working properly +++++ 
+
+ +++++ Testing Railways class +++++ 
+Testing GetDistance : 
+Railways Class member GetDistance working properly.
+ +++++ Railways class is working properly +++++ 
+
+ +++++ Testing Passenger class +++++ 
+Info of Passenger : 
+Name : Rahul
+aadhaar number : 19CS10027
+Mobile number : 8087614522
+Gender of Passenger : Male
+Category of Passenger : General
+Date of Birth : Date : 15/2/2021
+Testing GetName : 
+Passenger Class member GetName working properly.
+ +++++ Passenger class is working properly +++++ 
+
+ +++++ Testing Booking classes +++++ 
+Testing on concrete booking class ACChairCar :
+Testing GetName : ACChairCar Class member GetName working properly.
+Testing GetTier : ACChairCar Class member GetTier working properly.
+Testing GetLoadFactor : ACChairCar Class member GetLoadFactor working properly.
+Testing IsAC : ACChairCar Class member IsAC working properly.
+Testing IsLuxury : ACChairCar Class member IsLuxury working properly.
+Testing IsSitting : ACChairCar Class member IsSitting working properly.
+ +++++ Booking classes is working properly +++++ 
+
+ +++++ Testing Booking class +++++ 
+Testing ComputeFare : 
+Booking Class member ComputeFare working properly.
+ +++++ Booking class are working properly +++++ 

@@ -1,0 +1,135 @@
+Testing Print of Date class : 
+d1 : 15/Feb/2021
+Testing Ostream of Date class : Date : 15/2/2021
+Testing Ostream of Station class (Printing to terminal) : Chennai
+Testing Print of Railways class : 
+Testing stations and sDistStations : 
+Printing IndianRailways info : 
+Printing all stations : 
+Mumbai
+Dehli
+Banglore
+Kolkata
+Chennai
+Printing distances b/w stations : 
+Mumbai - Delhi : 1447
+Mumbai - Banglore : 981
+Mumbai - Kolkata : 2014
+Mumbai - Chennai : 1338
+Delhi - Banglore : 2150
+Delhi - Kolkata : 1472
+Delhi - Chennai : 2180
+Banglore - Kolkata : 1871
+Banglore - Chennai : 350
+Kolkata - Chennai : 1659
+Testing PrintInfo Passenger class : 
+Info of Passenger : 
+Name : Rahul
+aadhaar number : 19CS10027
+Mobile number : 8087614522
+Gender of Passenger : Male
+Category of Passenger : General
+Date of Birth : Date : 15/2/2021
+Testing Ostream Passenger class : 
+Rahul
+19CS10027
+8087614522
+Male
+General
+Date : 15/2/2021
+Testing Ostream of Booking class (Printing to terminal) : 
+BOOKING SUCCEEDED:
+PNR Number = 1
+From Station = Mumbai
+To Station = Delhi
+Trvel Date = 15/Feb/2021
+Travel Class = AC First Class
+ : Mode: Sleeping
+ : Comfort: AC
+ : Bunks: 2
+ : luxury: Yes
+Fare = 2776
+
+BOOKING SUCCEEDED:
+PNR Number = 2
+From Station = Mumbai
+To Station = Delhi
+Trvel Date = 15/Feb/2021
+Travel Class = AC First Class
+ : Mode: Sleeping
+ : Comfort: AC
+ : Bunks: 2
+ : luxury: Yes
+Fare = 2776
+
+BOOKING SUCCEEDED:
+PNR Number = 3
+From Station = Mumbai
+To Station = Delhi
+Trvel Date = 15/Mar/2021
+Travel Class = AC 3 Tier
+ : Mode: Sleeping
+ : Comfort: AC
+ : Bunks: 3
+ : luxury: No
+Fare = 1316
+
+BOOKING SUCCEEDED:
+PNR Number = 4
+From Station = Kolkata
+To Station = Mumbai
+Trvel Date = 16/Mar/2021
+Travel Class = Sleeper
+ : Mode: Sleeping
+ : Comfort: Non - AC
+ : Bunks: 3
+ : luxury: No
+Fare = 1007
+
+BOOKING SUCCEEDED:
+PNR Number = 5
+From Station = Mumbai
+To Station = Chennai
+Trvel Date = 17/Mar/2021
+Travel Class = AC Chair Car
+ : Mode: Sitting
+ : Comfort: AC
+ : Bunks: 0
+ : luxury: No
+Fare = 886
+
+BOOKING SUCCEEDED:
+PNR Number = 6
+From Station = Mumbai
+To Station = Chennai
+Trvel Date = 18/Mar/2021
+Travel Class = AC 2 Tier
+ : Mode: Sleeping
+ : Comfort: AC
+ : Bunks: 2
+ : luxury: No
+Fare = 1388
+
+BOOKING SUCCEEDED:
+PNR Number = 7
+From Station = Chennai
+To Station = Mumbai
+Trvel Date = 19/Mar/2021
+Travel Class = Second Sitting
+ : Mode: Sitting
+ : Comfort: Non - AC
+ : Bunks: 0
+ : luxury: No
+Fare = 335
+
+BOOKING SUCCEEDED:
+PNR Number = 8
+From Station = Chennai
+To Station = Kolkata
+Trvel Date = 20/Mar/2021
+Travel Class = First Class
+ : Mode: Sleeping
+ : Comfort: Non - AC
+ : Bunks: 2
+ : luxury: Yes
+Fare = 2074
