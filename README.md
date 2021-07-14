@@ -6,13 +6,13 @@ We developed a rudimentary railway reservation / booking system (somewhat like I
 
 The main folder contains 3 parts:
 
-1. Documents.zip
+1. Documents :
 
 		a. Design.txt:  The design document stating the design details 
 		with principles and guidelines followed
 		b. TestPlan.txt: The testplan document stating scenarios for unit tests and the test application.
 
-2. Source.zip
+2. Source :
 
 		a. Implementation :
 		
@@ -44,7 +44,7 @@ The main folder contains 3 parts:
 			II.  TestApplication.cpp
 			III. MyTestApplication.cpp
 
-3. Outputs.zip
+3. Outputs :
 
 		a. UnitTesting.txt: The output of the unit tests.
 		b. TestApplication.txt: The output of the test application given in the assignment for booking class.
