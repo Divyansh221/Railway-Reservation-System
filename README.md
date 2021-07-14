@@ -1,8 +1,8 @@
 # Software Engineering Course Project
 
-## Assignment 3: Inheritance Hierarchy, Design, Analysis & Testing
+## Railway Reservation System
 
-In this assignment we develop a rudimentary railway reservation / booking system (somewhat like IRCTC Train Ticket Booking, but extremely scaled down in features). This is implemented via an Object Oriented C++ programme which is broken into numerous files.
+We developed a rudimentary railway reservation / booking system (somewhat like IRCTC Train Ticket Booking, but extremely scaled down in features). This is implemented via an Object Oriented C++ programme which is broken into numerous files.
 
 The main folder contains 3 parts:
 
