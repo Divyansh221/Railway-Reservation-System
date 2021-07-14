@@ -1,0 +1,311 @@
+Divyansh Bhatia	
+19CS10027
+
+The whole program consists of the following classes:
+
+1. Class Date:
+
+	Data Members:
+
+	Private: 
+    	- 2 enum classes for Month and Day names 
+    	- 3 unsigned integers for date, month and year
+
+    Constructors and Destructors:
+    	- Default constructor
+    	- Copy constructor
+    	- Destructor
+
+	Functions:
+
+	a. GetDate:
+		- Returns the date
+	
+	b. Print (const):
+		- Prints the date
+
+	c. Copy assignment operator (overloaded): 
+    	- Takes a constant Date reference as argument and assign the new value to current Date (same as Date passed in arguments)
+
+	d. IsValidDate:
+	    - Checks whether the date is valid or not 
+
+    e. Output Streaming Operator (friend, overloaded):
+    	- Prints the construced date in different style than Print
+
+    f. Unit testing function TestDate (static):
+    	- Provides scenarios for unit testing
+
+2. Class Station :
+
+	Data Members:
+
+	Private:
+    	- Name of Station of type string
+
+    Constructors and Destructors:
+    	- Default constructor
+    	- Copy constructor
+    	- Destructor 
+
+	Functions: 
+
+	a. GetName (const): 
+    	- Returns the name of the station 
+
+	b. GetDistance (const): 
+    	- Takes a constant Station reference as argument and returns the distance between them
+
+    c. Copy assignment operator (overloaded): 
+    	- Takes a constant Station reference as argument and assign the new value to current station (same as station passed in arguments)
+
+	d. Equality == operator (friend, overloaded): 
+    	- Returns true if both stations are same otherwise false
+
+	e. Output Streaming operator (friend, overloaded): 
+    	- Takes a constant Station reference and an ostream reference as arguments and prints its name 
+
+    f. Vector containing the distance between every pair of stations as pair 
+        of pairs
+
+    g. Unit testing function TestStation (static):
+    	- Provides scenarios for unit testing
+
+3. Class Passenger
+
+	Data Members:
+
+    Private:
+    	- 3 strings for name, aadhar, mobile
+    	- 2 enums types Gender and Category
+    	- Date of Birth as type Date
+
+	Constructors and Destructors:
+    	- Default constructor
+    	- Copy constructor
+    	- Destructor
+
+	Functions:
+
+	a. GetName (const):
+		- Returns name of the Passenger
+
+	b. PrintInfo (const):
+		- Prints the Passenger details
+
+	c. Copy assignment operator (overloaded): 
+    	- Takes a constant Passenger reference as argument and assign the new value to current Passenger (same as Passenger passed in arguments)
+
+	d. Output Streaming Operator (friend, overloaded):
+    	- Prints the construced passenger details in a different style than Print
+
+    e. Unit testing function TestPassenger (static):
+    	- Provides scenarios for unit testing
+
+4. Class Railways
+
+    Data Members:
+
+	Private:
+		- A singleton Railways as IndianRailways
+		- Vector of Stations
+		- Vector containing the distance between every pair of stations as pair of pairs
+
+	Constructors and Destructors:
+    	- Private constructor (As it is a singleton class)
+    	- Destructor
+
+	Functions:
+
+	a. GetInstance (static const):
+    	- Return the constant reference of the constant instance of the class 
+
+	b. GetDistance (const):
+    	- Takes two constant Station reference as arguments and returns the distance between them as an integer
+
+	c. Print (const): 
+    	- Prints all details about the IndianRailways.
+
+    d. Unit testing function TestRailways (static):
+    	- Provides scenarios for unit testing
+
+5. Class Booking
+
+	Data members:
+    
+    Private:
+    	- 2 stations, fromStation and toStation
+    	- 3 static consts for sACSurcharge, sLuxuryTaxPercent and sBaseFarePerKM
+    	- 4 strings for name, mode, confortType, luxuryType, bookingMessage
+    	- A float variable to store fare calculated
+    	- 1 Date for journey date
+    	- 1 BookingClass
+        - A boolean variable to check booking status
+    Public:
+    	- A static vector (sBookings) of pointers to Bookings till now
+        - A static integer for last alotted PNR serial number sBookingPNRSerial
+
+    Constructors and Destructors:
+    	- Default constructor
+    	- Destructor
+
+	Functions:
+
+	a. ComputeFare (const):
+		- Returns the fare of the booking rounded to the nearest integer
+
+	b. Output Streaming operator (friend, overloaded): 
+    	- Takes a constant Booking reference and an ostream reference as arguments and prints details of the Booking for the journey	
+
+    c.	Unit testing function TestBooking (static):
+    	- Provides scenarios for unit testing
+
+6. Class BookingClass
+    - Abstract Base class of Polymorphic hierarchy
+
+    Data Members:
+
+	Protected: 
+	    - Name of the booking class as type string
+	    - Boolean value for sitting status
+	    - Boolean value for AC status
+	    - Boolean value for luxury status
+	    - Integer value for number of tiers
+	    - Float value to store load factor
+
+	Functions:
+
+	a. GetName (virtual, const):
+    	- Returns name of Booking Class as type string
+
+	b. GetLoadFactor (virtual, const):
+    	- Returns load factor of corresponding Booking class  
+
+	c. IsSitting (virtual, const):
+    	- Returns true when the corresponding booking class has Seats
+
+	d. IsAC (virtual, const):
+    	- Returns true when the corresponding booking class is AC 
+	
+	e. IsLuxury (virtual, const): 
+    	- Returns true when the corresponding booking class is luxurious  
+
+	f. GetTiers (virtual, const):
+    	- Returns the number of tiers in the corresponding booking class as type integer
+
+	g. Output Streaming operator (friend, overloaded): 
+    	- Takes a constant BookingClass reference and an ostream reference as arguments and prints details of the Booking class 
+
+A. Class Seat
+    - Inherited from class BookingClass
+    - Second level of hierarchy
+
+	Functions:
+
+	a. IsSitting (override):
+    	- Always returns boolean value true
+
+B. Class Berth
+    - Inherited from class BookingClass
+    - Second level of hierarchy
+
+	Functions:
+
+	a. IsSitting (override):
+    	- Always returns boolean value false
+
+C. Class Tier0
+    - Inherited from class Seat
+    - Third level of hierarchy
+
+	Functions:
+
+	a. GetTiers (override):
+    	- Always returns integer value 0
+
+D. Class Tier2
+    - Inherited from class Berth
+    - Third level of hierarchy
+
+	Functions:
+
+	a. GetTiers (override):
+    	- Always returns integer value 2
+
+E. Class Tier3
+    - Inherited from class Berth
+    - Third level of hierarchy
+
+	Functions:
+
+	a. GetTiers (override):
+    	- Always returns integer value 3
+
+-> Class ACChairCar
+    - Inherited from class Tier0
+    - Final concrete class (Last level of hierarchy)
+
+	Functions:
+
+	a. Type (static):
+    	- Creates a static object and returns its reference
+
+-> Class SecondSitting
+    - Inherited from class Tier0
+    - Final concrete class (Last level of hierarchy)
+
+	Functions:
+
+	a. Type (static):
+    	- Creates a static object and returns its reference
+
+-> Class ACFirstClass
+    - Inherited from class Tier2
+    - Final concrete class (Last level of hierarchy)
+
+	Functions:
+
+	a. Type (static):
+    	- Creates a static object and returns its reference
+
+-> Class AC2Tier
+    - Inherited from class Tier2
+    - Final concrete class (Last level of hierarchy)
+
+	Functions:
+
+	a. Type (static):
+    	- Creates a static object and returns its reference
+
+-> Class FirstClass
+    - Inherited from class Tier3
+    - Final concrete class (Last level of hierarchy)
+
+	Functions:
+
+	a. Type (static):
+    	- Creates a static object and returns its reference
+
+-> Class AC3Tier
+    - Inherited from class Tier3
+    - Final concrete class (Last level of hierarchy)
+
+	Functions:
+
+	a. Type (static):
+    	- Creates a static object and returns its reference
+
+-> Class Sleeper
+    - Inherited from class Tier3
+    - Final concrete class (Last level of hierarchy)
+
+	Functions:
+
+	a. Type (static):
+    	- Creates a static object and returns its reference
+
+    Every Concrete Booking Class has a Private Constructor and a Destructor
+    
+	Data Members of above concrete classes:
+
+		- All the data members defined in BookingClass are initialised to their values as the arguments in the constructor.

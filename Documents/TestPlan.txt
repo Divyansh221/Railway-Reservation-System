@@ -1,0 +1,96 @@
+# Software Engineering
+
+## Assignment 3: Inheritance Hierarchy, Design, Analysis & Testing
+
+### The testplan document explaining unit tests and application tests.
+
+1. Unit Test Plan : 
+	
+	A. Unit Testing of Date Class:	
+		- We created an instances of Date class namely d1 (15/Feb/2021).
+		- We first checked GetDate member function of Date class,
+		- GetDate should return the Date.
+		- Output is "Date Class member GetDate working properly.", thus it returns 15 i.e. GetDate method is correct.
+		- We then checked IsValidDate member function of Date class,
+		- If date is in correct form (dd/mm/yyyy) then the member function should return true else false.
+		- Output is "Date is valid!", thus it returns true i.e. date method is correct.
+		- We then Test copy assignment operator by initialising d2 = d1,
+		- We Test them by using print method of Date class, both shows same output (Prints date in 15/Feb/2021), thus it works properly.
+		- Thus, all methods of Date class are working properly with no error.
+
+	B. Unit Testing of Station Class:
+		- We created two instances of Station class namely s1 (Chennai) and s2 (Mumbai).
+		- We first checked GetName member function of Station class,
+		- GetName should return the name of the station.
+		- Output is "Station Class member GetName working properly.", thus it returns "Chennai" i.e. GetName method is correct.
+		- We then checked GetDistance member function of Station class, taking s2 as parameter;
+		- GetDistance should return the distance between the station s1 and s2.
+		- Output is "Station Class member GetDistance working properly.", thus it returns 1338 i.e. GetDistance method is correct.
+		- We then checked equality check operator of Station class,
+		- It should return the true is two stations have same values.
+		- Output is "Station Class overloaded equality operator working properly.", thus it returns false in this case i.e. overloaded equality operator is correct.
+		- Thus, all methods of Station class are working properly with no error.
+
+	C. Unit Testing of Railways Class:
+		- We created two instances of Station class namely s1 (Chennai) and s2 (Mumbai).
+		- Railways::GetInstance() returns the constant object of the respective type,
+		- We then checked GetDistance member function of Railways class, taking s1 and s2 as parameters, by Railways::GetInstance().GetDistance();
+		- GetDistance should return the distance between the station s1 and s2.
+		- Output is "Railways Class member GetDistance working properly.", thus it returns 1338 i.e. GetDistance method is correct.
+		- Thus, all methods of Railways class are working properly with no error.
+
+	D. Unit Testing of Passenger Class:
+		- We created insatnces of Gender and Category type i.e. g and c (Male and General),
+		- We then created two instance of Passenger class namely p (Name = Divyansh Bhatia, Aadhaar = 19CS10027, Mobile = 7076120333, Gender = g, Category = c , Date of Birth = 30/10/2001) and q (defaulted).
+		- We first checked GetName member function of Passenger class,
+		- GetName should return the name of the Passenger namely "Divyansh Bhatia".
+		- Output is "Passenger Class member GetName working properly.", thus it returns "Divyansh Bhatia" i.e. GetName method is correct.
+		- Thus, all methods of Railways class are working properly with no error.
+
+	E. Unit Testing of BookingClasses :
+		- It is an abstract base class, also we have introduced several intermediate abstract base classes based on what is available, seat or berth and 3 others based on number of tiers.
+		- We have tested for only ACChairCar class from all the concrete booking classes as others are exactly similar to this with change of name only.
+		- We passed the constant object of the ACChairCar type (singleton concrete booking class), as a constant base class object b (Upshift).
+		- We first checked GetName member function of the concrete booking class ACChairCar,
+		- GetName should return the name of the Booking class namely "AC Chair Car".
+		- Output is "ACChairCar Class member GetName working properly.", thus it returns "AC Chair Car" i.e. GetName method is correct.
+		- We then checked GetTier member function of the concrete booking class ACChairCar,
+		- GetTier should return the number of Tier of the Booking class ACChairCar i.e. 0.
+		- Output is "ACChairCar Class member GetTier working properly.", thus it returns 0 i.e. GetTier method is correct.
+		- We then checked GetLoadFactor member function of the concrete booking class ACChairCar,
+		- GetLoadFactor should return the fare load factor of the Booking class ACChairCar i.e. 1.25.
+		- Output is "ACChairCar Class meer function of the concrete booking class ACChairCar,
+		- IsAC should return true if the Booking class ACChairCar is AC i.e. True.
+		- Output is "ACChairCar Class member IsAC working properly.", thus it returns True i.e. IsAC method is correct.
+		- We then checked IsLuxury member function of the concrete booking class ACChairCar,
+		- IsLuxury should return true if the Booking class ACChairCar is of the type Luxury and not ordinary i.e. False as it is of ordinary type.
+		- Output is "ACChairCar Class member IsLuxury working properly.", thus it returns false i.e. IsLuxury method is correct.
+		- We then checked IsSitting member function of the concrete booking class ACChairCar,
+		- IsSitting should return true if the Booking class ACChairCar conatins seat and not berth i.e. True as it contains seats (Tier 0).
+		- Output is "ACChairCar Class member IsSitting working properly.", thus it returns True i.e. IsSitting method is correct.mber GetLoadFactor working properly.", thus it returns 1.25 i.e. GetLoadFactor method is correct.
+		- We then checked IsAC memb
+		- Thus, all methods of each concrete Booking class are working properly with no error and overall the entire heirarchy is logically and functionally correct.
+
+	F. Unit Testing of Booking Class:
+		- We created an instance of Booking class namely b (fromStation = Mumbai, 
+		toStation = Delhi, Date of travel = 15/02/2021) and ACFirstClass::Type() returns the constant object of the respective type.
+		- We first checked ComputeFare member function of ACFirstClass class,
+		- ComputeFare should return the fare calculated for the ticket (2776).
+		- Output is "Booking Class member ComputeFare working properly.", thus it returns 2776 i.e. ComputeFare method is correct.
+		- Thus, all methods of Booking class are working properly with no error.
+
+2. Application Test Plan :
+	
+	- We test Print functions and Ostream operator to output information to the terminal, since we have not tested in Unit Testing.
+	- We also Tests Ostream operator of Date class, printing d2 to terminal (15/2/2021), showing its correctness.
+	- We then Tests Ostream operator of Station class, printing s1 to terminal (Chennai), showing its correctness.
+	- We then Test Print member function of Railways class, printing list of all stations and distances between stations to terminal, showing its correctness.
+	- We then Tests Ostream operator of Railways class, printing list of all stations and distances between stations to terminal (same as Print), showing its correctness.
+	- We then test the PrintInfo() method function of Passenger class, it print the 
+	correct information of the Passenger p, showing its correctness.
+	- We then Tests Ostream operator of Passenger class, printing information of Passenger p (same as PrintInfo() function) to terminal, showing its correctness.
+	- We construct 6 Bookings and then print their status.
+	- We then Tests Ostream operator of Booking Class, printing information regarding booking to terminal,
+	- It shows Booking Succeded with all the information, showing its correctness.
+
+## Thus all the member functions of all classes are working correctly without any error.
